@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Setmore | Free Online Appointment Scheduling Software</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets\icons\favicon.svg">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+
+<body>
+<div class="video-background" aria-hidden="true">
+    <video autoplay loop muted playsinline>
+        <source src="assets/videos/setmore.mp4" type="video/mp4">
+        <img src="assets/images/redwood tress.jpg" alt="Redwood trees forest">
+    </video>
+</div>
+
+  <script src="js/state.js"></script>
+  <script src="js/main.js"></script>
+
+  <main class="login-layout">
+    <div class="app-promo">
+            <div class="app-promo__content">
+                <h3 class="app-promo__title">Get the mobile app</h3>
+                <p class="app-promo__text">For iOS and Android</p>
+            </div>
+            <img src="assets/images/qr-code.png" alt="Scan to download app" class="app-promo__qr">
+        </div>
+        <section class="login-panel">
+            
+            <header class="login-panel__header">
+                <img src="assets/images/setmore-tree-logo.svg" alt="Setmore" class="brand-logo">
+                
+                <div class="support-contact support-contact--desktop">
+                    <img src="assets/icons/phone-call-svg.svg" alt="" class="support-contact__icon" aria-hidden="true">
+                    <span class="support-contact__text">Call 24/7</span>
+                    <a href="tel:1-800-700-8888" class="support-contact__link">1-800-700-8888</a>
+                </div>
+            </header>
+            
+
+            <div class="login-panel__body">
+                
+                
+                <div id="view-initial" class="auth-view">
+                    <h1 class="login-panel__title">Login</h1>
+                    
+                    <div class="sso-group">
+                        <button class="btn-sso" aria-label="Login with Google"><img src="assets/icons/icon-google.svg" alt=""></button>
+                        <button class="btn-sso" aria-label="Login with Apple"><img src="assets/icons/icon-apple-black.svg" alt=""></button>
+                        <button class="btn-sso" aria-label="Login with Microsoft"><img src="assets/icons/icon-microsoft.svg" alt=""></button>
+                    </div>
+
+                    <div class="divider"><span class="divider__text">or</span></div>
+
+                    <button class="btn-primary" id="btn-show-email-form">Login with email</button>
+
+                    <p class="auth-switch">
+                        New user? <a href="#" class="auth-switch__link">Create an account</a>
+                    </p>
+                </div>
+
+                
+                <div id="view-email" class="auth-view" style="display: none;">
+                    <h1 class="login-panel__title">Login with email</h1>
+                    
+                    <form id="email-login-form" class="auth-form">
+                        <div class="form-group">
+                            <input type="email" id="user-email" class="form-input" placeholder="Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="password" id="user-password" class="form-input" placeholder="Password" required>
+                        </div>
+
+                       
+                        <div class="form-actions">
+                            <a href="#" class="forgot-password-link">Forgot password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-primary--black">Login</button>
+                    </form>
+
+                    <div class="divider"><span class="divider__text">or</span></div>
+
+                    <div class="sso-group">
+                        <button class="btn-sso" aria-label="Login with Google"><img src="assets/icons/icon-google.svg" alt=""></button>
+                        <button class="btn-sso" aria-label="Login with Apple"><img src="assets/icons/icon-apple-black.svg" alt=""></button>
+                        <button class="btn-sso" aria-label="Login with Microsoft"><img src="assets/icons/icon-microsoft.svg" alt=""></button>
+                    </div>
+
+                    <p class="auth-switch">
+                        Don’t have an account? <a href="#" class="auth-switch__link">Sign up</a>
+                    </p>
+                </div>
+               
+                <div id="view-otp" class="auth-view" style="display: none;">
+                    <h1 class="login-panel__title">Verify your account</h1>
+                    
+                    <p class="auth-subtitle">
+                        Please enter the 6-digit code sent to 
+                        <strong id="display-user-email">xyz@gmail.com</strong>
+                    </p>
+
+                    <form id="otp-form" class="auth-form">
+                       
+                        <div class="otp-group">
+                            <input type="text" class="otp-input" maxlength="1" pattern="\d*" required>
+                            <input type="text" class="otp-input" maxlength="1" pattern="\d*" required>
+                            <input type="text" class="otp-input" maxlength="1" pattern="\d*" required>
+                            <input type="text" class="otp-input" maxlength="1" pattern="\d*" required>
+                            <input type="text" class="otp-input" maxlength="1" pattern="\d*" required>
+                            <input type="text" class="otp-input" maxlength="1" pattern="\d*" required>
+                        </div>
+
+                        <div class="trust-device-group">
+                            <input type="checkbox" id="trust-device" class="custom-checkbox">
+                            <label for="trust-device" class="trust-device-label">Trust this device</label>
+                            
+                            <svg class="info-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="8" cy="8" r="7.5" stroke="currentColor"/>
+                                <path d="M8 11.5V7.5M8 4.5H8.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
+                        
+                        <div class="resend-group">
+                            Didn’t get an email? <a href="#" class="auth-switch__link">Resend code</a>
+                        </div>
+                        
+                       
+                        <button type="submit" class="btn-primary btn-primary--black">Verify</button>
+                    </form>
+                </div>
+                
+            </div>
+
+        
+            <footer class="login-panel__footer">
+                
+               
+                <div class="support-contact support-contact--mobile">
+                    <span class="support-contact__text">Call 24/7</span>
+                    <a href="tel:1-800-700-8888" class="support-contact__link">1-800-700-8888</a>
+                </div>
+
+               
+                <p class="legal-text legal-text--desktop">
+                    By logging in, you agree to our <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>
+                </p>
+                
+               
+                <p class="copyright-text copyright-text--desktop">©2025 Setmore. All Rights Reserved.</p>
+
+               
+                <p class="legal-text legal-text--mobile">
+                    By logging in you agree to <a href="#">Terms & Privacy</a>
+                </p>
+            </footer>
+
+        </section>
+  </main>
+
+</body>
+</html>
